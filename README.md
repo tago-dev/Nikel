@@ -23,8 +23,14 @@ Para instalar e executar o projeto localmente, siga os seguintes passos:
    ```
 
 3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-4. Execute o projeto:
+5. Execute o projeto:
+   ```bash
+   npm start
+   ```
 
 ## Uso
 Após iniciar o projeto, você pode acessar a aplicação no seu navegador em http://localhost:3000. Cadastre-se ou faça login para começar a adicionar suas transações.
