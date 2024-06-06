@@ -57,4 +57,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 ## Contato
 Se você tiver alguma dúvida ou sugestão, entre em contato conosco através do GitHub.
 
-`Esse README oferece uma visão geral clara e concisa do projeto, além de instruções detalhadas para instalação, uso, contribuição e contato.`
