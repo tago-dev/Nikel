@@ -1,41 +1,73 @@
 :root {
-    --primary: #3a7dfa;
+    --primary: #4f46e5;
     --primary-dark: #2652a3;
-    --secondary: #5c48ed;
+    --secondary: #4338ca;
     --dark: #1a1b25;
     --light: #ffffff;
     --gray: #f5f7fa;
-    --gray-dark: #eaedf2;
+    --gray-dark: #666;
+    --gray-light: #ddd;
     --text: #444a52;
     --success: #34d399;
     --danger: #f87171;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --radius: 12px;
+    --radius: 0.5rem;
     --transition: all 0.3s ease;
+    
+    /* Light theme (default) */
+    --body-bg: #f8f9fa;
+    --text-color: #212529;
+    --card-bg: #fff;
+    --header-bg: #fff;
+    --border-color: rgba(0, 0, 0, 0.125);
+    --table-hover-bg: rgba(0, 0, 0, 0.03);
+    --modal-bg: #fff;
+    --input-bg: #fff;
+    --input-border: #ced4da;
+}
+
+[data-theme="dark"] {
+    --body-bg: #121212;
+    --text-color: #e6e6e6;
+    --card-bg: #1e1e1e;
+    --header-bg: #1c1c1c;
+    --border-color: rgba(255, 255, 255, 0.125);
+    --table-hover-bg: rgba(255, 255, 255, 0.03);
+    --modal-bg: #1e1e1e;
+    --input-bg: #2c2c2c;
+    --input-border: #3c3c3c;
 }
 
 body {
+    background-color: var(--body-bg);
+    color: var(--text-color);
     font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color: var(--text);
+    transition: var(--transition);
 }
 
 #login {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) no-repeat fixed;
+    background-color: var(--body-bg);
+    color: var(--text-color);
 }
 
 #app {
-    background: var(--gray);
+    background-color: var(--body-bg);
+    color: var(--text-color);
     min-height: 100vh;
 }
 
 header {
-    border-bottom: 1px solid var(--gray-dark);
+    border-bottom: 1px solid var(--border-color);
     padding: 12px 0;
-    background: var(--light);
+    background-color: var(--header-bg);
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.navbar {
+    background-color: var(--header-bg) !important;
 }
 
 .color-primary {
@@ -79,17 +111,25 @@ header {
 }
 
 .text-login {
-    color: var(--light);
+    color: var(--text-color);
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 30px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.text-login h1 {
+    color: var(--text-color);
+}
+
+.text-muted {
+    color: #a0a0a0 !important;
+}
+
 .button-login {
     border-radius: var(--radius);
-    background-color: var(--light);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--light);
     font-weight: 600;
     width: 50%;
     margin: 0 25%;
@@ -186,7 +226,7 @@ header {
 }
 
 .dropdown-item:hover {
-    background-color: var(--gray);
+    background-color: var(--table-hover-bg);
 }
 
 .menu {
@@ -221,16 +261,19 @@ header {
 }
 
 /* Form styles */
-.form-control {
-    border-radius: var(--radius);
-    padding: 12px;
-    border: 1px solid var(--gray-dark);
-    transition: var(--transition);
+.form-control, .form-select {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border-color: var(--input-border);
 }
 
-.form-control:focus {
-    box-shadow: 0 0 0 3px rgba(58, 125, 250, 0.2);
-    border-color: var(--primary);
+.form-control:focus, .form-select:focus {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+.form-floating>.form-control~label {
+    color: var(--gray-dark);
 }
 
 .modal-content {
@@ -238,15 +281,17 @@ header {
     overflow: hidden;
     border: none;
     box-shadow: var(--shadow);
+    background-color: var(--modal-bg);
+    color: var(--text-color);
 }
 
 .modal-header {
-    border-bottom: 1px solid var(--gray-dark);
-    background-color: var(--light);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--header-bg);
 }
 
 .modal-footer {
-    border-top: 1px solid var(--gray-dark);
+    border-top: 1px solid var(--border-color);
 }
 
 /* Profile styles */
@@ -349,7 +394,7 @@ header {
     border-radius: var(--radius);
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid var(--gray-dark);
+    border: 1px solid var(--border-color);
 }
 
 .category-badge {
@@ -436,4 +481,268 @@ header {
     padding: 3px 8px;
     border-radius: 12px;
     margin-left: 5px;
+}
+
+/* Theme toggle */
+.theme-toggle {
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    background-color: transparent;
+    border: none;
+    z-index: 100;
+    position: relative;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle i {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+/* Corrigir ícones no tema escuro */
+[data-theme="dark"] .bi:not(.color-primary):not(.btn-success .bi):not(.btn-danger .bi):not(.badge .bi) {
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--card-bg);
+    transition: var(--transition);
+    border-color: var(--border-color);
+}
+
+/* Corrigir a cor de fundo do navbar no tema escuro */
+[data-theme="dark"] .navbar,
+[data-theme="dark"] .navbar-light {
+    background-color: var(--header-bg) !important;
+}
+
+/* Estilos específicos para elementos dentro do tema escuro */
+[data-theme="dark"] .navbar-brand img {
+    filter: brightness(1.2);
+}
+
+[data-theme="dark"] .form-floating > .form-control:focus ~ label,
+[data-theme="dark"] .form-floating > .form-control:not(:placeholder-shown) ~ label,
+[data-theme="dark"] .form-floating > .form-select ~ label {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+[data-theme="dark"] .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+[data-theme="dark"] .form-check-label {
+    color: var(--text-color);
+}
+
+/* Garantir que o botão flutuante tenha a cor correta */
+.button-float {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Corrigir as cores do botão default */
+.button-default {
+    background-color: var(--primary);
+    color: white;
+}
+
+.button-default:hover {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+/* Corrigir as cores do botão cancel */
+.button-cancel {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.button-cancel:hover {
+    background-color: var(--table-hover-bg);
+}
+
+/* Estilos para o botão de login */
+.button-login {
+    background-color: var(--primary);
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.button-login:hover {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+/* Login page special styles */
+#login .card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+#login .text-muted {
+    color: var(--gray-dark) !important;
+}
+
+[data-theme="dark"] #login .text-white {
+    color: var(--text-color) !important;
+}
+
+/* Force white text on primary colored buttons in dark mode */
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .button-default,
+[data-theme="dark"] .button-login,
+[data-theme="dark"] .button-float {
+    color: white !important;
+}
+
+/* Ensure background color is properly applied to html as well */
+html {
+    background-color: var(--body-bg);
+    transition: var(--transition);
+}
+
+/* Garantir que o texto seja legível no tema escuro */
+[data-theme="dark"] body,
+[data-theme="dark"] .card,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .dropdown-menu,
+[data-theme="dark"] .dropdown-item,
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] label,
+[data-theme="dark"] .form-text {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Adicionar !important para sobrescrever estilos Bootstrap */
+[data-theme="dark"] .text-muted {
+    color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .navbar-light .navbar-brand,
+[data-theme="dark"] .navbar-light .navbar-nav .nav-link {
+    color: var(--text-color) !important;
+}
+
+/* Corrigir fundo do navbar */
+[data-theme="dark"] .navbar, 
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .navbar-light {
+    background-color: var(--header-bg) !important;
+}
+
+/* Corrigir info card que tem background-color: var(--light) */
+.info {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* Garantir que os botões no tema escuro tenham texto branco */
+[data-theme="dark"] .button-default,
+[data-theme="dark"] .button-login,
+[data-theme="dark"] .button-float,
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .badge,
+[data-theme="dark"] .badge.bg-success,
+[data-theme="dark"] .badge.bg-danger {
+    color: white !important;
+}
+
+/* Corrigir cores de hover para botões icon no tema escuro */
+[data-theme="dark"] .btn-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Corrigir cor do texto para o login */
+[data-theme="dark"] #login .text-white,
+[data-theme="dark"] .text-login p,
+[data-theme="dark"] .text-login h1 {
+    color: var(--text-color) !important;
+}
+
+/* Corrigir cor da tabela */
+[data-theme="dark"] .table {
+    color: var(--text-color) !important;
+}
+
+/* Corrigir cor dos inputs */
+[data-theme="dark"] .form-floating > .form-control:focus ~ label,
+[data-theme="dark"] .form-floating > .form-control:not(:placeholder-shown) ~ label,
+[data-theme="dark"] .form-floating > .form-select ~ label {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Estilos específicos para tabela de transações no tema escuro */
+[data-theme="dark"] .table-hover > tbody > tr:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme="dark"] .table thead th {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] hr {
+    border-top-color: var(--border-color) !important;
+}
+
+/* Corrigir cor dos links */
+[data-theme="dark"] a,
+[data-theme="dark"] .link-defalt {
+    color: #6b8afd !important;
+}
+
+[data-theme="dark"] a:hover,
+[data-theme="dark"] .link-defalt:hover {
+    color: #8aa3ff !important;
+}
+
+/* Corrigir componentes do bootstrap que não estão aplicando o tema escuro */
+[data-theme="dark"] .form-check-label,
+[data-theme="dark"] .form-label {
+    color: var(--text-color) !important;
+}
+
+/* Adicionar um estilo para os elementos que não mudaram de cor no tema escuro*/
+[data-theme="dark"] *:not(.color-primary):not(.btn-primary):not(.button-default):not(.button-float):not(.btn-success):not(.btn-danger):not(.badge):not(.button-login):not(.link-defalt) {
+    color: var(--text-color);
+}
+
+/* Corrigir especificamente para h2, h5, h6 e outros elementos de texto */
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] p,
+[data-theme="dark"] span:not(.badge *) {
+    color: var(--text-color) !important;
 }

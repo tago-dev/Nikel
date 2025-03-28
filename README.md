@@ -18,6 +18,9 @@ Nikel é uma aplicação moderna de gerenciamento financeiro que permite aos usu
 - 📊 **Registro de Transações**: Adicione entradas e saídas com data, valor e descrição
 - 📱 **Design Responsivo**: Experiência consistente em dispositivos móveis e desktop
 - 🌙 **Interface Moderna**: Design limpo e intuitivo com componentes visuais atrativos
+- 🔍 **Categorização**: Organize suas transações em categorias personalizadas
+- 📈 **Análise Gráfica**: Visualize suas finanças com gráficos interativos
+- 🌓 **Modo Escuro**: Alterne entre os temas claro e escuro conforme sua preferência
 
 ## 🚀 Instalação e Uso
 
@@ -103,12 +106,12 @@ public/
 - [x] Upload de foto de perfil
 - [x] Categorização de transações
 - [x] Análise financeira com gráficos
+- [x] Modo escuro
 - [ ] Exportação de relatórios
-- [ ] Modo escuro
 - [ ] Suporte para múltiplas contas
 - [ ] Notificações e lembretes
 
-## �� Contribuição
+## 📄 Contribuição
 
 Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
