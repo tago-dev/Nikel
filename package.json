@@ -1,0 +1,32 @@
+{
+    "name": "nikel",
+    "version": "1.0.0",
+    "description": "Uma aplicação moderna de gerenciamento financeiro pessoal",
+    "main": "index.js",
+    "scripts": {
+        "start": "http-server ./public -p 3000 -o",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tago-dev/Nikel.git"
+    },
+    "keywords": [
+        "finanças",
+        "gestão",
+        "dinheiro",
+        "orçamento",
+        "html",
+        "css",
+        "javascript"
+    ],
+    "author": "Tago Dev",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/tago-dev/Nikel/issues"
+    },
+    "homepage": "https://github.com/tago-dev/Nikel#readme",
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
+}
