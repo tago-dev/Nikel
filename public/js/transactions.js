@@ -44,6 +44,11 @@ function checkLogged() {
     const dataUser = localStorage.getItem(logged);
     if (dataUser) {
         data = JSON.parse(dataUser);
+
+        // Display profile photo in header if available
+        if (data.photo) {
+            displayHeaderPhoto(data.photo);
+        }
     }
 
     getTransactions()
@@ -83,4 +88,18 @@ function getTransactions() {
 
 function saveData(data) {
     localStorage.setItem(data.login, JSON.stringify(data));
+}
+
+// Display profile photo in header
+function displayHeaderPhoto(photoSrc) {
+    const headerPhotoDisplay = document.getElementById("header-photo");
+
+    // Clear existing content
+    headerPhotoDisplay.innerHTML = "";
+
+    // Create and add image
+    const img = document.createElement("img");
+    img.src = photoSrc;
+    img.alt = "Profile Photo";
+    headerPhotoDisplay.appendChild(img);
 }

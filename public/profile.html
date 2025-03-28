@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikel - Perfil</title>
+
+    <!-- links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body id="app">
+    <header>
+        <nav class="navbar navbar-expand navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/nikel-small-logo.png" alt="logo nikel" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                    aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="conteudoNavbarSuportado">
+                    <div class="d-flex menu">
+                        <a href="home.html"><button class="btn btn-icon" type="button"><i
+                                    class="bi bi-house-door-fill fs-4"></i></button></a>
+                        <a href="transactions.html"><button class="btn btn-icon" type="button"><i
+                                    class="bi bi-currency-exchange fs-4"></i></button></a>
+
+                        <div class="dropdown">
+                            <button class="btn btn-icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <div class="header-profile-photo" id="header-photo">
+                                  <i class="bi bi-person-circle fs-4 color-primary"></i>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu logout" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" id="button-logout">Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container py-4">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 d-flex mt-2 justify-content-start align-items-center">
+                                    <i class="bi bi-person-badge color-primary icon-detail"></i>
+                                    <div>
+                                        <h6 class="mb-0 text-muted">Gerenciar</h6>
+                                        <h2 class="fw-bold mb-0">Perfil</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-flex mt-2 justify-content-end">
+                                    <div class="text-center">
+                                        <img src="./assets/images/coins-small.png" alt="coins image" style="max-height: 64px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm info mb-4">
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="text-center">
+                                        <div class="profile-photo-container mb-3">
+                                            <div class="profile-photo" id="profile-photo">
+                                                <i class="bi bi-person-circle"></i>
+                                            </div>
+                                            <div class="profile-photo-edit">
+                                                <label for="profile-photo-input" class="btn btn-sm button-default">
+                                                    <i class="bi bi-camera-fill me-1"></i>Alterar
+                                                </label>
+                                                <input type="file" id="profile-photo-input" accept="image/*" class="d-none">
+                                            </div>
+                                        </div>
+                                        <div id="photo-name" class="text-muted small fst-italic mb-3">Nenhuma foto selecionada</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8">
+                                    <form id="profile-form">
+                                        <div class="mb-4">
+                                            <h5 class="fw-bold mb-3">Informações do Perfil</h5>
+                                            
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="name-input" placeholder="Seu nome" required>
+                                                <label for="name-input">Nome completo</label>
+                                            </div>
+                                            
+                                            <div class="form-floating mb-3">
+                                                <input type="email" class="form-control" id="profile-email" placeholder="nome@exemplo.com" readonly>
+                                                <label for="profile-email">E-mail</label>
+                                                <div class="form-text">O e-mail não pode ser alterado.</div>
+                                            </div>
+                                            
+                                            <hr class="my-4">
+                                            
+                                            <h5 class="fw-bold mb-3">Segurança</h5>
+                                            
+                                            <div class="form-floating mb-3">
+                                                <input type="password" class="form-control" id="current-password" placeholder="Senha atual">
+                                                <label for="current-password">Senha atual</label>
+                                            </div>
+                                            
+                                            <div class="form-floating mb-3">
+                                                <input type="password" class="form-control" id="new-password" placeholder="Nova senha">
+                                                <label for="new-password">Nova senha</label>
+                                            </div>
+                                            
+                                            <div class="form-floating mb-4">
+                                                <input type="password" class="form-control" id="confirm-password" placeholder="Confirmar senha">
+                                                <label for="confirm-password">Confirmar nova senha</label>
+                                            </div>
+                                            
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <button type="submit" class="btn button-default">
+                                                    <i class="bi bi-check-circle me-1"></i>Salvar alterações
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <script src="./js/profile.js"></script>
+</body>
+
+</html> 

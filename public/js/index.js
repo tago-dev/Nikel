@@ -73,6 +73,13 @@ function checkLogged() {
 }
 
 function saveAccount(data) {
+    // Ensure we have name and photo fields
+    if (!data.name) {
+        data.name = "";
+    }
+    if (!data.photo) {
+        data.photo = "";
+    }
     localStorage.setItem(data.login, JSON.stringify(data));
 }
 

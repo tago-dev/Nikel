@@ -5,93 +5,121 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nikel - Home</title>
+  <title>Nikel - Dashboard</title>
 
   <!-- links -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body id="app">
   <header>
     <nav class="navbar navbar-expand navbar-light bg-white">
-      <a class="navbar-brand" href="#">
-        <img src="./assets/images/nikel-small-logo.png" alt="logo nikel" class="img-fluid">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/nikel-small-logo.png" alt="logo nikel" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+          aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="conteudoNavbarSuportado">
-        <div class="d-flex menu">
-          <a href="home.html"><button class="btn btn-icon" type="button"><i
-                class="bi bi-house-door-fill fs-4 color-secundary"></i></button></a>
-          <a href="transactions.html"><button class="btn btn-icon" type="button"><i
-                class="bi bi-currency-exchange fs-4"></i></button></a>
+        <div class="collapse navbar-collapse justify-content-end" id="conteudoNavbarSuportado">
+          <div class="d-flex menu">
+            <a href="home.html"><button class="btn btn-icon" type="button"><i
+                  class="bi bi-house-door-fill fs-4 color-primary"></i></button></a>
+            <a href="transactions.html"><button class="btn btn-icon" type="button"><i
+                  class="bi bi-currency-exchange fs-4"></i></button></a>
 
-          <div class="dropdown">
-            <button class="btn btn-icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <i class="bi bi-person-circle fs-4"></i>
-            </button>
-            <ul class="dropdown-menu logout" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" id="button-logout">Sair</a></li>
-            </ul>
+            <div class="dropdown">
+              <button class="btn btn-icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <div class="header-profile-photo" id="header-photo">
+                  <i class="bi bi-person-circle fs-4"></i>
+                </div>
+              </button>
+              <ul class="dropdown-menu logout" aria-labelledby="dropdownMenuButton1">
+                <li><a href="profile.html" class="dropdown-item dropdown-item-profile"><i class="bi bi-person-badge me-2"></i>Meu Perfil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" id="button-logout">Sair</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </nav>
   </header>
   <main>
-    <div class="container">
-      <div class="row">
-        <div class="col d-flex mt-4 justify-content-start align-items-center">
-          <i class="bi bi-cash-coin color-primary icon-detail"></i>
-          <span class="fs-2" id="total">R$ 0,00</span>
-        </div>
-        <div class="col d-flex mt-4 justify-content-end">
-          <div class="text-center">
-            <img src="./assets/images/coins-small.png" alt="coins image">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 info shadow-lg">
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <span class="fs-4">Entradas <i class="bi bi-arrow-down-circle fs-2 align-middle"></i></span>
-              </div>
-              <div class="col-6">
-                <span class="fs-4">Saidas <i class="bi bi-arrow-up-circle"></i></span>
-              </div>
-              <div class="col-12 my-2">
-                <hr>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <div class="container p-0" id="cash-in-list">
-
+    <div class="container py-4">
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="row align-items-center">
+                <div class="col-md-6 d-flex mt-2 justify-content-start align-items-center">
+                  <i class="bi bi-cash-coin color-primary icon-detail"></i>
+                  <div>
+                    <h6 class="mb-0 text-muted">Saldo total</h6>
+                    <h2 class="fw-bold mb-0" id="total">R$ 0,00</h2>
+                  </div>
                 </div>
-              </div>
-              <div class="col-6">
-                <div class="container p-0" id="cash-out-list">
-
+                <div class="col-md-6 d-flex mt-2 justify-content-end">
+                  <div class="text-center">
+                    <img src="./assets/images/coins-small.png" alt="coins image" style="max-height: 64px;">
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 mb-4">
-                <button type="button" class="btn button-default" id="transactions-button">Ver todas</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <button class="btn button-float" data-bs-toggle="modal" data-bs-target="#transaction-modal"><i
-          class="bi bi-plus"></i></button>
+      
+      <div class="row">
+        <div class="col-12">
+          <div class="card border-0 shadow-sm info mb-4">
+            <div class="card-body p-4">
+              <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                  <div class="d-flex align-items-center mb-3">
+                    <span class="badge bg-success me-2" style="padding: 8px;"><i class="bi bi-arrow-down-circle"></i></span>
+                    <h5 class="fw-bold mb-0">Entradas</h5>
+                  </div>
+                  <hr>
+                  <div class="container p-0" id="cash-in-list">
+                    <!-- Cash in entries will be added here -->
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="d-flex align-items-center mb-3">
+                    <span class="badge bg-danger me-2" style="padding: 8px;"><i class="bi bi-arrow-up-circle"></i></span>
+                    <h5 class="fw-bold mb-0">Saídas</h5>
+                  </div>
+                  <hr>
+                  <div class="container p-0" id="cash-out-list">
+                    <!-- Cash out entries will be added here -->
+                  </div>
+                </div>
+                
+                <div class="col-12 text-center mt-4">
+                  <button type="button" class="btn button-default" id="transactions-button">
+                    <i class="bi bi-list-ul me-2"></i>Ver todas as transações
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="btn button-float" data-bs-toggle="modal" data-bs-target="#transaction-modal">
+        <i class="bi bi-plus"></i>
+      </button>
     </div>
 
     <!-- Modal -->
@@ -99,37 +127,48 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar Lançamento</h1>
+            <h5 class="modal-title fw-bold" id="exampleModalLabel">Adicionar Lançamento</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <form id="transaction-form">
             <div class="modal-body">
-              <div class="mb-3">
+              <div class="form-floating mb-3">
+                <input type="number" step="any" class="form-control" id="value-input" placeholder="0,00" required>
                 <label for="value-input">Valor</label>
-                <input type="number" step="any" class="form-control" id="value-input" aria-describedby="emailHelp" required>
               </div>
-              <div class="mb-3">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="description-input" placeholder="Descrição" required>
                 <label for="description-input">Descrição</label>
-                <input type="text" class="form-control" id="description-input" required>
               </div>
-              <div class="mb-3">
-                <label for="date-input">Data</label>
+              <div class="form-floating mb-4">
                 <input type="date" class="form-control" id="date-input" required>
+                <label for="date-input">Data</label>
               </div>
               <div class="mb-3">
+                <h6 class="mb-2">Tipo de operação</h6>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="type-input" id="inlineRadio1" value="1">
-                  <label class="form-check-label" for="inlineRadio1">Entrada</label>
+                  <input class="form-check-input" type="radio" name="type-input" id="inlineRadio1" value="1" checked>
+                  <label class="form-check-label" for="inlineRadio1">
+                    <span class="badge bg-success">
+                      <i class="bi bi-arrow-down-circle me-1"></i>Entrada
+                    </span>
+                  </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="type-input" id="inlineRadio2" value="2">
-                  <label class="form-check-label" for="inlineRadio2">Saída</label>
+                  <label class="form-check-label" for="inlineRadio2">
+                    <span class="badge bg-danger">
+                      <i class="bi bi-arrow-up-circle me-1"></i>Saída
+                    </span>
+                  </label>
                 </div>
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary button-cancel" data-bs-dismiss="modal">Cancelar</button>
-              <button type="submit" class="btn button-default">Adicionar</button>
+              <button type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn button-default">
+                <i class="bi bi-check-circle me-1"></i>Adicionar
+              </button>
             </div>
           </form>
         </div>
