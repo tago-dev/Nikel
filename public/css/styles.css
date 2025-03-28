@@ -343,3 +343,97 @@ header {
     height: 100%;
     object-fit: cover;
 }
+
+/* Category styles */
+.category-select {
+    border-radius: var(--radius);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--gray-dark);
+}
+
+.category-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.category-badge:hover {
+    transform: translateY(-2px);
+}
+
+.category-badge.active {
+    border: 2px solid var(--primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-badge i {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.category-food {
+    background-color: #FFE0B2;
+    color: #E65100;
+}
+
+.category-transport {
+    background-color: #B3E5FC;
+    color: #01579B;
+}
+
+.category-entertainment {
+    background-color: #E1BEE7;
+    color: #6A1B9A;
+}
+
+.category-health {
+    background-color: #C8E6C9;
+    color: #1B5E20;
+}
+
+.category-education {
+    background-color: #BBDEFB;
+    color: #0D47A1;
+}
+
+.category-shopping {
+    background-color: #FFCCBC;
+    color: #BF360C;
+}
+
+.category-bills {
+    background-color: #D7CCC8;
+    color: #3E2723;
+}
+
+.category-salary {
+    background-color: #C8E6C9;
+    color: #1B5E20;
+}
+
+.category-investment {
+    background-color: #B2DFDB;
+    color: #004D40;
+}
+
+.category-other {
+    background-color: #CFD8DC;
+    color: #37474F;
+}
+
+.transaction-category {
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-left: 5px;
+}

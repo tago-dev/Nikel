@@ -144,6 +144,53 @@
                 <input type="date" class="form-control" id="date-input" required>
                 <label for="date-input">Data</label>
               </div>
+              <div class="mb-4">
+                <h6 class="mb-2">Categoria</h6>
+                <div class="category-select d-flex flex-wrap gap-2">
+                  <input type="hidden" id="category-input" value="other" required>
+                  
+                  <!-- Categorias de entrada -->
+                  <div class="income-categories">
+                    <span class="category-badge category-salary" data-category="salary" data-type="1">
+                      <i class="bi bi-wallet2"></i>Salário
+                    </span>
+                    <span class="category-badge category-investment" data-category="investment" data-type="1">
+                      <i class="bi bi-graph-up-arrow"></i>Investimento
+                    </span>
+                    <span class="category-badge category-other" data-category="other" data-type="1">
+                      <i class="bi bi-three-dots"></i>Outros
+                    </span>
+                  </div>
+                  
+                  <!-- Categorias de saída -->
+                  <div class="expense-categories">
+                    <span class="category-badge category-food" data-category="food" data-type="2">
+                      <i class="bi bi-egg-fried"></i>Alimentação
+                    </span>
+                    <span class="category-badge category-transport" data-category="transport" data-type="2">
+                      <i class="bi bi-car-front"></i>Transporte
+                    </span>
+                    <span class="category-badge category-entertainment" data-category="entertainment" data-type="2">
+                      <i class="bi bi-controller"></i>Lazer
+                    </span>
+                    <span class="category-badge category-health" data-category="health" data-type="2">
+                      <i class="bi bi-heart-pulse"></i>Saúde
+                    </span>
+                    <span class="category-badge category-education" data-category="education" data-type="2">
+                      <i class="bi bi-book"></i>Educação
+                    </span>
+                    <span class="category-badge category-shopping" data-category="shopping" data-type="2">
+                      <i class="bi bi-bag"></i>Compras
+                    </span>
+                    <span class="category-badge category-bills" data-category="bills" data-type="2">
+                      <i class="bi bi-receipt"></i>Contas
+                    </span>
+                    <span class="category-badge category-other" data-category="other" data-type="2">
+                      <i class="bi bi-three-dots"></i>Outros
+                    </span>
+                  </div>
+                </div>
+              </div>
               <div class="mb-3">
                 <h6 class="mb-2">Tipo de operação</h6>
                 <div class="form-check form-check-inline">

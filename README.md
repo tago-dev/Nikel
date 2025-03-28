@@ -97,7 +97,7 @@ public/
 
 Funcionalidades planejadas para futuras versões:
 
-- [ ] Categorização de transações
+- [x] Categorização de transações
 - [ ] Gráficos de análise financeira
 - [ ] Exportação de relatórios
 - [ ] Modo escuro
@@ -131,15 +131,15 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ## 📬 Contato
 
-**Desenvolvedor:** Tago Dev
+**Desenvolvedor:** Tiago Bettega
 
 - GitHub: [@tago-dev](https://github.com/tago-dev)
-- LinkedIn: [Tago Dev](https://linkedin.com/in/tagodev)
-- E-mail: contato@tagodev.com
+- LinkedIn: [Tago Dev](https://www.linkedin.com/in/tiagobettega/)
+- E-mail: tago.dev@pm.me
 
 ---
 
 <p align="center">
-  Desenvolvido com ❤️ por <a href="https://github.com/tago-dev">Tago Dev</a>
+  Desenvolvido com ❤️ por <a href="https://github.com/tago-dev">Tiago Bettega</a>
 </p>
 
