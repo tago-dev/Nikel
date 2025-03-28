@@ -1,9 +1,0 @@
-Este arquivo é um placeholder para o screenshot da aplicação Nikel.
-
-Para criar uma imagem real para o README.md:
-1. Execute a aplicação
-2. Capture uma tela da página home com algumas transações
-3. Salve como 'nikel-screenshot.png' neste diretório
-4. Substitua este arquivo de texto
-
-A imagem ajudará os usuários a entenderem visualmente como a aplicação funciona. 

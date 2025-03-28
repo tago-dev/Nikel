@@ -10,8 +10,6 @@
 
 Nikel é uma aplicação moderna de gerenciamento financeiro que permite aos usuários controlar suas finanças pessoais de maneira simples e intuitiva. Com uma interface limpa e responsiva, os usuários podem adicionar entradas e saídas, visualizar seu saldo atual e analisar todo o histórico de transações.
 
-> **Nota:** Para uma melhor apresentação, capture uma tela da aplicação funcionando e salve como `public/assets/images/nikel-screenshot.png`.
-
 ## ✨ Funcionalidades
 
 - 🔐 **Autenticação Segura**: Sistema de login/cadastro para proteger dados financeiros
