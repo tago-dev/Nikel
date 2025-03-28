@@ -61,6 +61,11 @@ Nikel é uma aplicação moderna de gerenciamento financeiro que permite aos usu
    http://localhost:3000
    ```
 
+### Demonstração Online
+
+Acesse a versão de demonstração do projeto:
+- [https://nikel-sandy.vercel.app/](https://nikel-sandy.vercel.app/)
+
 ### Uso Rápido
 
 1. Crie uma conta com seu e-mail e senha
