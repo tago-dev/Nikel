@@ -127,20 +127,21 @@ header {
 }
 
 .button-login {
-    border-radius: var(--radius);
     background-color: var(--primary);
-    color: var(--light);
-    font-weight: 600;
-    width: 50%;
-    margin: 0 25%;
+    color: white;
+    width: 100%;
     padding: 12px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 16px;
     transition: var(--transition);
     border: none;
     box-shadow: var(--shadow);
 }
 
-.button-login:hover, .button-default:hover {
-    background-color: var(--gray);
+.button-login:hover {
+    background-color: var(--primary-dark);
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
@@ -562,7 +563,8 @@ header {
 
 .button-default:hover {
     background-color: var(--primary-dark);
-    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Corrigir as cores do botão cancel */
@@ -574,23 +576,6 @@ header {
 
 .button-cancel:hover {
     background-color: var(--table-hover-bg);
-}
-
-/* Estilos para o botão de login */
-.button-login {
-    background-color: var(--primary);
-    color: white;
-    width: 100%;
-    padding: 12px;
-    border-radius: var(--radius);
-    font-weight: 600;
-    font-size: 16px;
-    transition: var(--transition);
-}
-
-.button-login:hover {
-    background-color: var(--primary-dark);
-    color: white;
 }
 
 /* Login page special styles */
