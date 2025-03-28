@@ -95,16 +95,20 @@ public/
 
 ## 📝 Roadmap
 
-Funcionalidades planejadas para futuras versões:
-
+- [x] Cadastro de usuários
+- [x] Login de usuários
+- [x] Cadastro de transações de entrada e saída
+- [x] Edição de transações
+- [x] Exclusão de transações
+- [x] Upload de foto de perfil
 - [x] Categorização de transações
-- [ ] Gráficos de análise financeira
+- [x] Análise financeira com gráficos
 - [ ] Exportação de relatórios
 - [ ] Modo escuro
 - [ ] Suporte para múltiplas contas
 - [ ] Notificações e lembretes
 
-## 👥 Contribuição
+## �� Contribuição
 
 Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
